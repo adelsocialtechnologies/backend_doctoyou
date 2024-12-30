@@ -62,4 +62,15 @@ const getAllpatientUser = async (req, res) =>{
     res.status(500).json({ message: 'Failed to retrieve patientUser', error });
   }
 }
-module.exports = { signup, login  , getAllpatientUser};
+
+const getPatientUserbyId= async(req, res) =>{
+  const {patientId} = req.params;
+  try {
+    const patient = await patientUser.findById(patientId);
+    res.status(200).json({ patient });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to retrieve patientUser', error });
+  }
+
+}
+module.exports = { signup, login  , getAllpatientUser , getPatientUserbyId};
