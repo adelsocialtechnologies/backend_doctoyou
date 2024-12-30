@@ -14,6 +14,7 @@ const signup = async (req, res) => {
     consultantFees,
     hospital,
     categories,
+    verification
   } = req.body;
 
   try {
@@ -32,6 +33,7 @@ const signup = async (req, res) => {
       password: hashedPassword,
       appointmentTime,
       consultantFees,
+      verification,
       hospital: {
         name: hospital.name,
         location: hospital.location,
@@ -83,4 +85,22 @@ const getAlldoctorUser = async (req, res) =>{
     res.status(500).json({ message: 'Failed to retrieve doctorUser', error });
   }
 }
-module.exports = { signup, login  , getAlldoctorUser};
+
+const aprovedDoctor = async (req, res) =>{
+  const { doctorId } = req.params;
+  try{
+    const doctor=await doctorUser.findById(doctorId);
+    if(!doctor)
+    {
+      return res.json({message:"Doctor not found"})
+    }
+    doctor.verification='approved';
+    doctor.save();
+    return res.json({message:"Doctor Approved Succesfully "})
+  }
+  catch (error) {
+    return res.status(500).json({ message: 'Server error', error });
+  } 
+
+}
+module.exports = { signup, login  , getAlldoctorUser ,aprovedDoctor};

@@ -33,6 +33,11 @@ const doctorSchema = new mongoose.Schema({
     type:String,
     required:true
   },
+  verification: {
+    type: String,
+    enum:['pending', 'approved'],
+    required: true, 
+  },
   hospital: {
     name: {
       type: String,
