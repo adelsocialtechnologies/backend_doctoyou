@@ -18,7 +18,7 @@ const updateDailyAndMonthlyReports = async (doctorId, status, increment, date) =
       confirmedAppointment: 0,
       rejectedAppointment: 0,
       cancelAppointment: 0,
-      visited: 0,
+      visitedAppointment: 0,
       doctorData: [],
     });
   }
@@ -32,7 +32,7 @@ const updateDailyAndMonthlyReports = async (doctorId, status, increment, date) =
       confirmedAppointment: 0,
       rejectedAppointment: 0,
       cancelAppointment: 0,
-      visited: 0,
+      visitedAppointment: 0,
     };
     dailyReport.doctorData.push(doctorData);
   }
@@ -56,7 +56,7 @@ const updateDailyAndMonthlyReports = async (doctorId, status, increment, date) =
       confirmedAppointment: 0,
       rejectedAppointment: 0,
       cancelAppointment: 0,
-      visited: 0,
+      visitedAppointment: 0,
       doctorData: [],
     });
   }
@@ -70,7 +70,7 @@ const updateDailyAndMonthlyReports = async (doctorId, status, increment, date) =
       confirmedAppointment: 0,
       rejectedAppointment: 0,
       cancelAppointment: 0,
-      visited: 0,
+      visitedAppointment: 0,
     };
     monthlyReport.doctorData.push(monthlyDoctorData);
   }

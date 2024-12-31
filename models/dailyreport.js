@@ -24,7 +24,7 @@ const dailyReport = new mongoose.Schema({
         type:Number,
         required:true
     },
-    visited:{
+    visitedAppointment:{
         type:Number,
         required:true
     },
@@ -55,7 +55,7 @@ const dailyReport = new mongoose.Schema({
             type:Number,
             required:true
         },
-        visited:{
+        visitedAppointment:{
             type:Number,
             required:true
         }

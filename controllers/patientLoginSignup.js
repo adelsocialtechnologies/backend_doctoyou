@@ -73,4 +73,4 @@ const getPatientUserbyId= async(req, res) =>{
   }
 
 }
-module.exports = { signup, login  , getAllpatientUser , getPatientUserbyId};
+module.exports = { signup, login, getAllpatientUser , getPatientUserbyId};
