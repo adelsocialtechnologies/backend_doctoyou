@@ -59,7 +59,7 @@ const monthlyReportController = {
             confirmedAppointment: doctorData.confirmedAppointment,
             rejectedAppointment: doctorData.rejectedAppointment,
             cancelAppointment: doctorData.cancelAppointment,
-            visited: doctorData.visited,
+            visitedAppointment: doctorData.visitedAppointment,
             _id: doctorData._id,
           };
         }
